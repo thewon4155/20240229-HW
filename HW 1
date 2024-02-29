@@ -1,0 +1,25 @@
+from random import randint
+def game():
+    print("start Up&Down Game")
+    random = randint(1, 100)
+    cnt = 0
+
+    while True:
+        inputData = int(input("User Input: "))
+        cnt += 1
+        if(inputData < random):
+            print("Up")
+        elif (inputData > random):
+            print("Down")
+        elif (inputData == random):
+            print("축하드립니다! 시도한 횟수는 "+ str(cnt) + " 번 입니다")
+            break
+
+game()
+
+while True:
+    user_input = input("한번 더? (Y/N) :")
+    if user_input == "Y":
+        game()
+    else:
+        break
